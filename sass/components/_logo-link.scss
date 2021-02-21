@@ -1,0 +1,25 @@
+.logo-link {
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+    font-family: var(--logo-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.192;
+    letter-spacing: 0.03em;
+    font-style: normal;
+  }
+  .logo-web {
+    color: var(--link-color);
+    font-family: var(--logo-font);
+    font-style: normal;
+  }
+  .logo-link-dark-theme {
+    color: var(--text-color-accent);
+  }
+  
+  .logo-link-light-theme {
+    color: #000000;
+  }
+  
