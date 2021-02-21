@@ -1,0 +1,26 @@
+.hero-btn {
+    padding: 10px 32px;
+    width: 200px;
+    font-family: var(--text-font);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background-color: var(--link-color);
+    color: var(--background-color);
+    transition-property: color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--cubic);
+    cursor: pointer;
+  }
+  
+  .hero-btn {
+    border: none;
+  }
+  
+  .hero-btn:hover,
+  .hero-btn:focus {
+    background-color: var(--link-color);
+    color: var(--text-color-accent);
+  }
