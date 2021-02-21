@@ -1,0 +1,49 @@
+.icon-list {
+    display: flex;
+    width: 206px;
+    height: 44px;
+    margin-right: -10px;
+    margin-bottom: -30px;
+  }
+  .icon-list-item {
+    display: inline-block;
+    display: flex;
+    text-decoration: none;
+  }
+  .icon-list:nth-child(4n) {
+    margin-right: 0;
+  }
+  .icon-list:nth-last-child(-n + 4) {
+    margin-bottom: 0px;
+  }
+  .icon-list-item {
+    margin-right: 10px;
+    
+  }
+  
+  .icon-link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    color: var(--icon-color);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    transition: color var(--duration) var(--cubic), background-color var(--duration) var(--cubic);
+    
+  }
+  
+  .icon-link:hover,
+  .icon-link:focus {
+    background-color: var(--link-color);
+    color: var(--background-color);
+  }
+  .icon-img {
+    display: flex;
+    fill: currentColor;
+    height: 20px;
+    width: 20px;
+  
+  }

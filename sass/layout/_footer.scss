@@ -53,6 +53,7 @@
   .footer-icons{
     margin-left: 70px;
       width: 206px;
+      display: block;
   }
   .icon-link .dark-them{
     color: var(--background-color);
@@ -64,4 +65,8 @@
   .icon-list-item .dark-them-1{
     fill:var(--background-color);
   }
-  
+  .icon-list-item .dark-them:hover,
+  .icon-list-item .dark-them:focus{
+    background-color: var(--link-color);
+    color: var(--background-color);
+  }
