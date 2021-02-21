@@ -1,7 +1,10 @@
 .footer {
     background-color: var(--header-footer-color);
   }
-  
+  .footer .container {
+    display: flex;
+   align-items: baseline;
+  }
   .footer {
     padding-top: 60px;
     padding-bottom: 60px;
