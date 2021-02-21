@@ -1,3 +1,8 @@
+@mixin font($fs: 14px, $fw: 400, $lh: 18px) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: decimal-round($lh/$fs, 3);
+}
 .footer-form{
     display: inline-block;
     width: 570px;
@@ -14,6 +19,20 @@
     background-color: var(--header-footer-color);
   
   }
+  
+  &::placeholder{
+    padding: 16px 15px;
+    font-family: var(--text-font);
+    @include font(400, 16, 1.250);
+   /*font-style: normal;
+   font-weight:400;
+   font-size: 16px;
+   line-height: 1.25;*/
+   @extend %align;
+   letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  }
+
   .footer-btn{
     display: inline-flex;
     position: relative;
@@ -21,9 +40,10 @@
     height: 50px;
     font-family: var(--text-font);
     font-style: normal;
-    font-weight: 700;
+    @include font(700, 16, 1.875);
+    /*font-weight: 700;
     font-size: 16px;
-    line-height:1.875;
+    line-height:1.875;*/
     align-items: center;
     padding: 10px 28px 10px 29px;
     letter-spacing: 0.06em;
@@ -45,10 +65,7 @@
   color:var(--background-color);
   margin-bottom: 20px;
   }
-  .footer-form-input{
-    display: flex;
-    align-items: center;
-  }
+  
    .icon-send{
    position: absolute;
    display: block;
@@ -57,15 +74,18 @@
    transform: translateY(-50%);
    transition: fill var(--duration) var(--cubic);
   }
+  .footer-form-input{
+    @extend %align;
+    }
   .footer-input::placeholder{
     padding: 16px 15px;
     font-family: var(--text-font);
-   font-style: normal;
+    @include font(400, 16, 1.250);
+   /*font-style: normal;
    font-weight:400;
    font-size: 16px;
-   line-height: 1.25;
-   display: flex;
-   align-items: center;
+   line-height: 1.25;*/
+   @extend %align;
    letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   }
