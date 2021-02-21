@@ -1,6 +1,7 @@
 
 //utils
 @import "./utils/variables";
+@import "./utils/visually-hidden";
 
 //base
 @import "./base/common";
@@ -14,6 +15,8 @@
 @import "./layout/header";
 @import "./layout/progect";
 @import "./layout/project-btn";
+@import "./layout/footer";
 @import "./components/footer-form";
+
 
 
