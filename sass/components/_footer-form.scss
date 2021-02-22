@@ -1,6 +1,6 @@
-@mixin font($fs: 14px, $fw: 400, $lh: 18px) {
-  font-size: $fs;
+@mixin font( $fw: 400,$fs: 14px, $lh: 18px) {
   font-weight: $fw;
+  font-size: $fs;
   line-height: decimal-round($lh/$fs, 3);
 }
 %align {
@@ -28,13 +28,9 @@
     padding: 16px 15px;
     font-family: var(--text-font);
     @include font(400, 16, 1.250);
-   /*font-style: normal;
-   font-weight:400;
-   font-size: 16px;
-   line-height: 1.25;*/
-   @extend %align;
-   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+    @extend %align;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
   }
 }
 
@@ -46,9 +42,6 @@
     font-family: var(--text-font);
     font-style: normal;
     @include font(700, 16, 1.875);
-    /*font-weight: 700;
-    font-size: 16px;
-    line-height:1.875;*/
     align-items: center;
     padding: 10px 28px 10px 29px;
     letter-spacing: 0.06em;
@@ -60,11 +53,9 @@
     border: none;
   }
   .footer-text{
-    font-family:var(--text-font);
+   font-family:var(--text-font);
   font-style: normal;
-  font-weight:700;
-  font-size: 14px;
-  line-height: 1.143;
+  @include font(700, 14 , 1.143 );
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color:var(--background-color);
@@ -86,12 +77,8 @@
     padding: 16px 15px;
     font-family: var(--text-font);
     @include font(400, 16, 1.250);
-   /*font-style: normal;
-   font-weight:400;
-   font-size: 16px;
-   line-height: 1.25;*/
-   @extend %align;
-   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+    @extend %align;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
   }
   
