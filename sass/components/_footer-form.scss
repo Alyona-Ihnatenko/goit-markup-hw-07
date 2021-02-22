@@ -3,6 +3,10 @@
   font-weight: $fw;
   line-height: decimal-round($lh/$fs, 3);
 }
+%align {
+  display: flex;
+  align-items: center;
+}
 .footer-form{
     display: inline-block;
     width: 570px;
@@ -18,7 +22,7 @@
     border-radius: 4px;
     background-color: var(--header-footer-color);
   
-  }
+ 
   
   &::placeholder{
     padding: 16px 15px;
@@ -32,6 +36,7 @@
    letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   }
+}
 
   .footer-btn{
     display: inline-flex;
