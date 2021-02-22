@@ -1,17 +1,17 @@
-@mixin font( $fw:400, $fs:14px, $lh:18px) {
+@mixin line-height-calc($fs, $lh, $fw) {
+  $lh-n: $lh * 1000;
+  $lh-b: $lh-n / $fs;
+  $lh-round: ceil($lh-b);
+   $lh-my: $lh-round/1000;
+  font-size: $fs * 1px;
+  line-height: $lh-my;
   font-weight: $fw;
-  font-size: $fs;
-  line-height: decimal-round($lh/$fs, 3);
 }
 .hero-btn {
     padding: 10px 32px;
     width: 200px;
     font-family: var(--text-font);
-    @include font(700,16,30);
-
-   /* font-weight: 700;
-    font-size: 16px;
-    line-height: 1.875;*/
+    @include line-height-calc(16, 30, 700);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     background-color: var(--link-color);
@@ -20,14 +20,15 @@
     transition-duration: var(--duration);
     transition-timing-function: var(--cubic);
     cursor: pointer;
-  }
-  
-  .hero-btn {
     border: none;
+    
+    &:hover,
+    &:focus {
+      background-color: var(--link-color);
+      color: var(--text-color-accent);
+    }
+ 
   }
   
-  .hero-btn:hover,
-  .hero-btn:focus {
-    background-color: var(--link-color);
-    color: var(--text-color-accent);
-  }
+  
+  

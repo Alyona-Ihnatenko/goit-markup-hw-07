@@ -1,9 +1,22 @@
+%align {
+  display: flex;
+  align-items: center;
+}
+@mixin line-height-calc($fs, $lh, $fw) {
+  $lh-n: $lh * 1000;
+  $lh-b: $lh-n / $fs;
+  $lh-round: ceil($lh-b);
+   $lh-my: $lh-round/1000;
+  font-size: $fs * 1px;
+  line-height: $lh-my;
+  font-weight: $fw;
+}
 .icon-list {
     display: flex;
     width: 206px;
     height: 44px;
     margin-right: -10px;
-    margin-bottom: -30px;
+    /*margin-bottom: -30px;*/
   }
   .icon-list-item {
     display: inline-block;
@@ -24,22 +37,22 @@
   .icon-link {
     width: 44px;
     height: 44px;
-    display: flex;
+    @extend %align;
     color: var(--icon-color);
     text-align: center;
     justify-content: center;
-    align-items: center;
     background-color: var(--background-color);
     border-radius: 50%;
     transition: color var(--duration) var(--cubic), background-color var(--duration) var(--cubic);
     
-  }
-  
-  .icon-link:hover,
-  .icon-link:focus {
+    &:hover,
+    &:focus {
     background-color: var(--link-color);
     color: var(--background-color);
+    }
   }
+  
+  
   .icon-img {
     display: flex;
     fill: currentColor;

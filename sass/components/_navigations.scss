@@ -1,3 +1,14 @@
+
+@mixin line-height-calc($fs, $lh, $fw) {
+  $lh-n: $lh * 1000;
+  $lh-b: $lh-n / $fs;
+  $lh-round: ceil($lh-b);
+   $lh-my: $lh-round/1000;
+  font-size: $fs * 1px;
+  line-height: $lh-my;
+  font-weight: $fw;
+}
+
 .navigation-list {
     display: flex;
   }
@@ -14,27 +25,26 @@
   }
   .navigation-list-item-link {
     font-family: var(--text-font);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.143;
+   @include line-height-calc(14, 24, 500);
     letter-spacing: 0.02em;
     padding-top: 32px;
     padding-bottom: 32px;
     color: var(--title-color) ;
     position: relative;
-  
     transition-property: color;
     transition-duration:var(--duration);
     transition-timing-function:var(--cubic);
+
+    &:hover,
+    &:focus {
+    color: var(--link-color);
+   }
   }
   .navigation-list-item {
     display: flex;
     
   }
-  .navigation-list-item-link:hover,
-  .navigation-list-item-link:focus {
-    color: var(--link-color);
-  }
+  
   .navigation-list-item-link.current::after{
     content: "";
     position: absolute;
@@ -59,18 +69,17 @@
     display: flex;
     align-items: center;
     margin-left: auto;
-    
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
-  .auth-nav-item:not(:last-child) {
-    margin-right: 50px;
-  }
+ 
   .tel-link,
   .mail-link {
     display:block;
     font-family: var(--text-font);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.143;
+    @include line-height-calc(14, 24, 500);
     letter-spacing: 0.02em;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -100,9 +109,9 @@
     margin-right: 10px;
   }
   
-  .tel-link,
+  /*.tel-link,
   .mail-link{
     display:flex;
     transition: fill,var(--duration), var(--cubic);
-  }
+  }*/
   

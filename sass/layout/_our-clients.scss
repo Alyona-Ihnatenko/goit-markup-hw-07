@@ -1,9 +1,11 @@
-.our-clients .container {
-    display: flex;
-  }
+
   .our-clients {
     padding-top: 94px;
     padding-bottom: 94px;
+
+    & .our-clients .container {
+      display: flex;
+    }
   }
   .our-clients-descr {
     display: flex;
@@ -33,13 +35,15 @@
      height: 100%;
      border: solid 1px var(--icon-color);
      transition: color var(--duration)var(--cubic), border-color var(--duration) var(--cubic);
+
+      &:hover,
+      &:focus{
+      border-color: var(--link-color);
+      color: var(--link-color);
+     }
     }
     
-  .our-clients-link:hover,
-  .our-clients-link:focus{
-    border-color: var(--link-color);
-    color: var(--link-color);
-  }
+  
   .our-clients-icon {
     display: flex;
     fill:currentColor;
@@ -48,11 +52,12 @@
     text-align: center;
     margin: auto;
     transition: color var(--duration) var(--cubic);
-  }
-  .our-clients-icon:hover,
-  .our-clients-icon:focus{
-   color: var(--link-color);
+
+    &:hover,
+    &:focus{
+    color: var(--link-color);
   
+    }
   }
   
   .our-clients-title {
